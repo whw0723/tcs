@@ -52,9 +52,18 @@ function drawGame() {
     // 碰撞检测
     if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount || 
         snake.slice(1).some(segment => segment.x === head.x && segment.y === head.y)) {
-        alert('游戏结束！得分：' + score);
-        resetGame();
+        document.getElementById('finalScore').textContent = score;
+        document.getElementById('gameOver').style.display = 'block';
+        return;
     }
+
+    // 添加回车键监听
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && document.getElementById('gameOver').style.display === 'block') {
+            document.getElementById('gameOver').style.display = 'none';
+            resetGame();
+        }
+    });
 }
 
 function generateFood() {
