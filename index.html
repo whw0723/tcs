@@ -8,8 +8,13 @@
 </head>
 <body>
     <div class="game-container">
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <canvas id="gameCanvas" width="400" height="400" tabindex="1"></canvas>
         <div class="score">得分: <span id="score">0</span></div>
+        <div class="difficulty">
+            <button class="difficulty-btn" data-speed="200">简单</button>
+            <button class="difficulty-btn active" data-speed="100">中等</button>
+            <button class="difficulty-btn" data-speed="50">困难</button>
+        </div>
         <div class="instructions">
             <h3>操作说明</h3>
             <p>方向键 → 移动</p>
@@ -22,7 +27,8 @@
         </div>
     </div>
     <footer class="copyright">
-        © 2024 贪吃蛇游戏. 作者：王汉伟
+        © 2025 贪吃蛇游戏. 作者：王汉伟
     </footer>
     <script src="game.js"></script>
 </body>
+</html>
