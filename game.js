@@ -15,7 +15,7 @@ let gameStarted = false;
 let score = 0;
 let isPaused = false;
 let inputQueue = [];
-let gameSpeed = 100; // 默认速度为中等难度
+let gameSpeed = 200; // 默认速度为中等难度
 
 // 难度选择按钮事件监听
 document.querySelectorAll('.difficulty-btn').forEach(btn => {
